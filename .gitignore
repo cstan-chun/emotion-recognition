@@ -1,0 +1,7 @@
+.superpowers/
+.claude/
+__pycache__/
+*.pyc
+outputs/
+data/processed/
+.env
