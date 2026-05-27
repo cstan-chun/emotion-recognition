@@ -1,5 +1,4 @@
 import os
-import sys
 import argparse
 import torch
 import torch.nn as nn
@@ -7,7 +6,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from tqdm import tqdm
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+
 from config import load_config
 from data_utils import EmotionDataset, collate_emotion_batch
 from emotion.model import EmotionModel

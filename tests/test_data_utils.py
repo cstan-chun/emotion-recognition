@@ -2,8 +2,7 @@ import torch
 import numpy as np
 import os
 import tempfile
-import sys
-sys.path.insert(0, "src")
+
 from data_utils import EmotionDataset, collate_emotion_batch
 
 

@@ -1,6 +1,3 @@
-import os
-import sys
-sys.path.insert(0, "src")
 from config import load_config
 from pipeline import EmotionRecognitionPipeline
 

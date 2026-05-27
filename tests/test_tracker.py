@@ -1,5 +1,4 @@
-import sys
-sys.path.insert(0, "src")
+
 from perception.tracker import FaceTracker
 
 

@@ -1,5 +1,4 @@
 import os
-import sys
 import tempfile
 import numpy as np
 import cv2
@@ -19,7 +18,6 @@ def generate_test_video(output_path: str, duration_sec: float = 3.0,
 
 
 def test_full_pipeline_structure():
-    sys.path.insert(0, "src")
     from config import load_config
     from pipeline import EmotionRecognitionPipeline
 
@@ -45,7 +43,6 @@ def test_full_pipeline_structure():
 
 
 def test_output_pipeline_integration():
-    sys.path.insert(0, "src")
     from config import load_config
     from output import OutputGenerator
 

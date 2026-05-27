@@ -26,7 +26,6 @@ MELD 原始结构（假设）:
 """
 
 import os
-import sys
 import argparse
 import numpy as np
 import pandas as pd
@@ -34,7 +33,7 @@ import librosa
 import cv2
 from tqdm import tqdm
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+
 from emotion.audio_encoder import AudioEncoder
 
 # MELD 情绪到项目标签的映射

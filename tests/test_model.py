@@ -1,7 +1,6 @@
 import pytest
 import torch
-import sys
-sys.path.insert(0, "src")
+
 from config import load_config
 from emotion.model import EmotionModel
 

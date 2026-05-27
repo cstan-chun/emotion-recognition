@@ -1,7 +1,6 @@
 import torch
 import numpy as np
-import sys
-sys.path.insert(0, "src")
+
 from emotion.audio_encoder import AudioEncoder
 
 

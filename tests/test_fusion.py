@@ -1,6 +1,5 @@
 import torch
-import sys
-sys.path.insert(0, "src")
+
 from emotion.fusion import CrossAttentionFusion
 
 

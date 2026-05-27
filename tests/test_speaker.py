@@ -1,6 +1,5 @@
 import numpy as np
-import sys
-sys.path.insert(0, "src")
+
 from speaker import (
     match_speaker, compute_audio_rms,
     compute_lip_motion_series, extract_mouth_roi,
