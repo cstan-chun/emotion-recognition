@@ -1,0 +1,56 @@
+model:
+  visual:
+    backbone: "efficientnet-b0"
+    pretrained: true
+    embedding_dim: 256
+    num_frames: 15
+    input_size: [224, 224]
+  audio:
+    sample_rate: 16000
+    mfcc_dim: 40
+    embedding_dim: 256
+    num_timesteps: 15
+  fusion:
+    dim: 256
+    num_heads: 4
+  classifier:
+    hidden_dim: 128
+    num_classes: 7
+    emotion_labels: ["angry", "disgust", "fear", "happy", "neutral", "sad", "surprise"]
+
+perception:
+  detector:
+    confidence_threshold: 0.5
+  tracker:
+    track_thresh: 0.5
+    match_thresh: 0.8
+    track_buffer: 30
+  vad:
+    threshold: 0.5
+    min_speech_duration_ms: 250
+    min_silence_duration_ms: 300
+
+speaker:
+  window_sec: 1.0
+
+output:
+  face_box_color_speaking: [0, 255, 0]
+  face_box_color_silent: [150, 150, 150]
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  batch_size: 16
+  num_workers: 4
+
+training:
+  epochs_pretrain: 30
+  epochs_joint: 20
+  epochs_finetune: 10
+  lr_pretrain: 0.001
+  lr_joint: 0.0005
+  lr_finetune: 0.0001
+  weight_decay: 0.0001
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  checkpoint_dir: "checkpoints"
